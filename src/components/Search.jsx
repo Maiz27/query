@@ -17,7 +17,8 @@ export const Search = () => {
   const handleSearch = () => {
     setSearchTerm(text);
     getResults(text);
-    navigate(`${location.pathname}`);
+
+    navigate("/search");
   };
 
   return (

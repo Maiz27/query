@@ -11,7 +11,17 @@ export const Footer = () => {
 
   return (
     <div className=" text-center p-10 mt-10 border-t dark:border-gray-700 border-gray-200">
-      <h1>&copy; {year} Query</h1>
+      <h1>
+        &copy; {year} Query,{" "}
+        <a
+          href="https://github.com/Maiz27"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text"
+        >
+          Maiz
+        </a>
+      </h1>
     </div>
   );
 };

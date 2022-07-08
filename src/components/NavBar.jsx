@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import { Search } from "./Search";
 import { MdDarkMode } from "react-icons/md";
 import { BsLightbulbFill } from "react-icons/bs";
+import logo from "../logo.png";
 
 export const NavBar = ({ darkTheme, setDarkTheme }) => {
   return (
     <div className="p-5 pb-0 flex flex-wrap sm:justify-between justify-center items-center border-b dark:border-gray-700 border-gray-200">
       <div className="flex justify-between items-center space-x-5 w-screen z-10">
         <Link to="/">
-          <p className="text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded dark:bg-gray-500 dark:text-gray-900">
-            Query
-          </p>
+          <div className="flex flex-column text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded dark:bg-gray-500 dark:text-gray-900">
+            <img src={logo} alt="logo" className="w-5 h-5 mt-1.5 mr-1" />
+            <p>Query</p>
+          </div>
         </Link>
         <button
           type="button"

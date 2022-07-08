@@ -28,8 +28,9 @@ export const Results = () => {
     case "/search":
       return (
         <div className="flex flex-wrap justify-between space-y-6 sm:px-56 pt-2">
-          {results?.map(({ link, title }, index) => (
+          {results?.map(({ link, title, description }, index) => (
             <div key={index} className="md:w-2/5 w-full">
+              {console.log(results)}
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <p className="text-sm">
                   {link.length > 30 ? link.substring(0, 30) : link}
@@ -38,6 +39,7 @@ export const Results = () => {
                   {title}
                 </p>
               </a>
+              <p>{description}</p>
             </div>
           ))}
         </div>
