@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useResultContext } from "../Context/ResultContextProvider";
 import { Links } from "./Links";
 import { FcSearch } from "react-icons/fc";
@@ -7,7 +7,6 @@ import { FcSearch } from "react-icons/fc";
 export const Search = () => {
   const [text, setText] = useState("");
   const { setSearchTerm, searchTerm, getResults } = useResultContext();
-  const location = useLocation();
   const navigate = useNavigate();
 
   const handleTextChange = (e) => {
